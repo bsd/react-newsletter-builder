@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ImageWidget from './ImageWidget/ImageWidget';
 import TextWidget from './TextWidget/TextWidget';
 import ThreeUpWidget from './ThreeUpWidget/ThreeUpWidget';
 import TwoUpWidget from './TwoUpWidget/TwoUpWidget';
@@ -25,6 +26,8 @@ class Widget extends Component {
 
 function getInnerWidget(type, props) {
   switch(type) {
+    case 'image':
+      return <ImageWidget {...props} />;
     case 'two-up':
       return <TwoUpWidget {...props} />;
     case 'three-up':

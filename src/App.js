@@ -31,6 +31,7 @@ class App extends Component {
           <div className="App-editor-adder">
             Add:
             <button onClick={() => { this.addWidget('text')} }>Paragraph</button>
+            <button onClick={() => { this.addWidget('image')} }>Image</button>
             <button onClick={() => { this.addWidget('two-up')} }>Two-Up Touts</button>
             <button onClick={() => { this.addWidget('three-up')} }>Three-Up Touts</button>
           </div>
@@ -43,7 +44,9 @@ class App extends Component {
           </PreviewPane>
         </div>
         <div className="App-output">
-          <textarea disabled value={this.state.markup}></textarea>
+          <textarea disabled
+              value={this.state.markup}
+              placeholder='Output HTML goes here.'/>
         </div>
       </div>
     );

@@ -12,7 +12,7 @@ class TextWidget extends Component {
   }
 
   output(value) {
-    return <div dangerouslySetInnerHTML={{__html: `${value}<br /><br />`}} />;
+    return <div dangerouslySetInnerHTML={{__html: value}} />;
   }
 
   handleChange(e) {
