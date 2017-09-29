@@ -16,7 +16,7 @@ body {
     'header header'
     'preview editor'
     'preview output';
-  grid-template-columns: auto 620px;
+  grid-template-columns: 620px auto;
   grid-template-rows: 60px auto 150px;
   min-height: 100vh;
 }
