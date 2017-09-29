@@ -29,7 +29,7 @@ class Tout extends Component {
     if (value.image) {
       image = (
         <tr>
-          <td align='left'><img src={value.image} alt='' style={{display: 'block','border': 0,'margin-bottom': '10px'}} /></td>
+          <td align='left'><img src={value.image} alt='' style={{display: 'block','border': 0,'marginBottom': '10px','maxWidth':'100%'}} /></td>
         </tr>
       );
       }
