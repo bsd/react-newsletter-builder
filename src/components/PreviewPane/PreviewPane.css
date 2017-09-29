@@ -1,0 +1,17 @@
+.frame {
+  border: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.outer-frame {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.btn-update {
+  right: 10px;
+  position: absolute;
+  top: 10px;
+}

@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.App {
+  display: grid;
+  grid-template-areas:
+    'header header'
+    'editor preview'
+    'output preview';
+  grid-template-columns: auto 620px;
+  grid-template-rows: 60px auto 150px;
+  min-height: 100vh;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  align-self: center;
+  background-color: #222;
+  color: white;
+  grid-area: header;
+  padding: 15px;
+  text-align: center;
+}
+
+.App-editor {
+  background-color: #ccc;
+  grid-area: editor;
+  overflow-x: scroll;
+  padding: 15px 15px 30px;
+  position: relative;
+}
+
+.App-editor-adder {
+  background-color: #aaa;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 5px;
+  position: absolute;
+}
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-preview {
+  grid-area: preview;
+}
+
+.App-output {
+  grid-area: output;
+}
+
+.App-output textarea {
+  height: 100%;
+  width: 100%;
+}
+
+.widget {
+  width: 100%;
+}
+
+.widget-text {
+  min-height: 50px;
+}
