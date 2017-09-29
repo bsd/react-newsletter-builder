@@ -4,7 +4,11 @@ import Frame from 'react-frame-component';
 import './PreviewPane.css';
 
 class PreviewPane extends Component {
-  
+  constructor() {
+    super();
+    this.previewWindow = null;
+  }
+
   render() {
     return (<div className='outer-frame'>
       <Frame
@@ -109,7 +113,7 @@ alink="#3c96e2" link="#3c96e2" bgcolor="#f8f8f8" text="#000000" yahoo="fix">
     <table cellpadding="15" cellspacing="0" border="0" bgcolor="#ffffff" width="600" align="center" class="email-content-table">
       <tr>
         <td align="center">
-          <a href="http://www.google.com"><img src="http://placehold.it/600x200" width="300" style="display: block" border="0" alt="Your Logo Here" title="Your Logo Here"></a>
+          <a href="http://www.google.com"><img src="http://www.therobotfund.org/page/-/email-generator/client-logo-2.jpg" width="300" style="display: block" border="0" alt="Your Logo Here" title="Your Logo Here"></a>
         </td>
       </tr>
       <tr>
@@ -134,7 +138,10 @@ alink="#3c96e2" link="#3c96e2" bgcolor="#f8f8f8" text="#000000" yahoo="fix">
         mountTarget='.email-content'>
         {this.props.children}
       </Frame>
-      <button className='btn-update' onClick={this.updateHtml.bind(this)}>Update HTML</button>
+      <div className='preview-controls'>
+        <button className='btn-update' onClick={this.updateHtml.bind(this)}>Update HTML</button>
+        <button className='btn-new-window' onClick={this.openInWindow.bind(this)}>Open in Window</button>
+      </div>
     </div>);
   }
 
@@ -147,11 +154,21 @@ alink="#3c96e2" link="#3c96e2" bgcolor="#f8f8f8" text="#000000" yahoo="fix">
 
   // TODO(jjandoc): I have no idea why this isn't running.
   contentDidUpdate() {
-    this.props.onPreviewUpdate(this.getPaneHtml());
+    const html = this.getPaneHtml();
+    this.props.onPreviewUpdate(html);
+    if (this.previewWindow) {
+      this.previewWindow.document.write(html);
+    }
   }
 
   updateHtml() {
     this.props.onPreviewUpdate(this.getPaneHtml());
+  }
+
+  openInWindow() {
+    const html = this.getPaneHtml();
+    this.previewWindow = window.open('about:blank', '', '_blank');
+    this.previewWindow.document.write(html);
   }
 }
 

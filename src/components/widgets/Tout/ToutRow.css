@@ -1,0 +1,11 @@
+.widget-tout-row {
+  display: flex;
+}
+
+.widget-tout-row .tout {
+  margin-right: 10px;
+}
+
+.widget-tout-row .tout:last-child {
+  margin-right: 0;
+}

@@ -1,0 +1,5 @@
+.tout input,
+.tout textarea {
+  margin-bottom: 5px;
+  width: 100%;
+}

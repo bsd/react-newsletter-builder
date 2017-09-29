@@ -17,7 +17,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Email Template Builder</h1>
+          <h1 className="App-title">Email Newsletter Builder</h1>
         </header>
         <div className="App-editor">
           {this.state.widgets.map((widget, i) => <Widget
@@ -29,14 +29,17 @@ class App extends Component {
               output={widget.output}
               removeWidget={this.removeWidget.bind(this)} />)}
           <div className="App-editor-adder">
-            <button onClick={() => { this.addWidget('text')} }>Add paragraph</button>
+            Add:
+            <button onClick={() => { this.addWidget('text')} }>Paragraph</button>
+            <button onClick={() => { this.addWidget('two-up')} }>Two-Up Touts</button>
+            <button onClick={() => { this.addWidget('three-up')} }>Three-Up Touts</button>
           </div>
         </div>
         <div className="App-preview">
           <PreviewPane
               onPreviewUpdate={this.handlePreviewUpdate.bind(this)}>
             {this.state.widgets.map((widget, i) =>
-                <div key={i}>{widget.output}</div>)}
+                <div key={i}>{widget.output}<br /><br /></div>)}
           </PreviewPane>
         </div>
         <div className="App-output">
@@ -68,7 +71,7 @@ class App extends Component {
   }
 
   addWidget(type) {
-    const widget = {type: type, value: '', output: ''};
+    const widget = {type: type};
     this.setState({widgets: [...this.state.widgets, widget]});
   }
 }
