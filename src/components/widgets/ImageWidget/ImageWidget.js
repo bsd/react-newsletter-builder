@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class ImageWidget extends Component {
   render() {
     return(<div className='widget-inner'>
-      <h4 className="widget-title">Paragraph</h4>
+      <h4 className="widget-title">Image</h4>
       <input 
           className='widget widget-image'
           name='image'
