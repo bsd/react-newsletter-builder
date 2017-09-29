@@ -14,8 +14,8 @@ body {
   display: grid;
   grid-template-areas:
     'header header'
-    'editor preview'
-    'output preview';
+    'preview editor'
+    'preview output';
   grid-template-columns: auto 620px;
   grid-template-rows: 60px auto 150px;
   min-height: 100vh;

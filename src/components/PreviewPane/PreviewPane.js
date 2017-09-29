@@ -113,7 +113,7 @@ alink="#3c96e2" link="#3c96e2" bgcolor="#f8f8f8" text="#000000" yahoo="fix">
     <table cellpadding="15" cellspacing="0" border="0" bgcolor="#ffffff" width="600" align="center" class="email-content-table">
       <tr>
         <td align="center">
-          <a href="http://www.google.com"><img src="http://www.therobotfund.org/page/-/email-generator/client-logo-2.jpg" width="300" style="display: block" border="0" alt="Your Logo Here" title="Your Logo Here"></a>
+          <a href="http://www.google.com" target="_blank"><img src="http://www.therobotfund.org/page/-/email-generator/client-logo-2.jpg" width="300" style="display: block" border="0" alt="Your Logo Here" title="Your Logo Here"></a>
         </td>
       </tr>
       <tr>
@@ -128,7 +128,7 @@ alink="#3c96e2" link="#3c96e2" bgcolor="#f8f8f8" text="#000000" yahoo="fix">
       </tr>
       <tr>
         <td align="center">
-          <a href="%%UNSUBSCRIBE%%?email=%%EMAIL%%" style="color:#3c96e2">Unsubscribe</a>
+          <a href="%%UNSUBSCRIBE%%?email=%%EMAIL%%" style="color:#3c96e2" target="_blank">Unsubscribe</a>
         </td>
       </tr>
     </table>
